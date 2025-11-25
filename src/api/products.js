@@ -1,4 +1,4 @@
-// src/api/products.js
+
 import api from './axios';
 
 export const productsApi = {

@@ -1,4 +1,4 @@
-// src/api/sales.js
+
 import api from './axios';
 
 export const salesApi = {
