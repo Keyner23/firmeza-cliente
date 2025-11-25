@@ -35,7 +35,7 @@
             @click="handleLogout"
             class="text-white hover:text-red-400 transition font-medium"
           >
-            🚪 Salir
+            🚫 Salir
           </button>
           
           <button

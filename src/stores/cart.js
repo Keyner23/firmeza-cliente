@@ -32,7 +32,7 @@ export const useCartStore = defineStore('cart', () => {
         name: product.name,
         price: product.price,
         quantity: quantity,
-        stock: product.stock
+        // stock: product.stock
       });
     }
   };

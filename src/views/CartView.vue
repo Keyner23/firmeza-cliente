@@ -173,24 +173,16 @@ const handleCheckout = async () => {
 
   try {
     const saleData = {
-      customer: authStore.isAuthenticated 
-        ? {
-            id: authStore.user.id,
-            name: authStore.user.name,
-            email: authStore.user.email,
-            document: 0
-          }
-        : {
-            name: customerName.value,
-            email: customerEmail.value,
-            document: parseInt(customerDocument.value)
-          },
-      details: cartStore.items.map(item => ({
-        productId: item.id,
-        quantity: item.quantity,
-        unitPrice: item.price
-      }))
-    };
+    customerId: authStore.isAuthenticated
+    ? authStore.user.id
+    : null, // si es invitado
+
+    details: cartStore.items.map(item => ({
+    productId: item.id,
+    quantity: item.quantity
+  }))
+};
+
 
     await salesApi.create(saleData);
     

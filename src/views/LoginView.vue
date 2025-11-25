@@ -45,11 +45,6 @@
         >
           {{ loading ? 'Iniciando sesión...' : 'Entrar' }}
         </button>
-
-        <div class="text-center text-sm text-gray-600">
-          ¿No tienes cuenta? 
-          <a href="#" class="text-amber-600 hover:text-amber-700 font-semibold">Regístrate</a>
-        </div>
       </form>
     </div>
   </div>
