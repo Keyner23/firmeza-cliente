@@ -80,9 +80,6 @@
               <span class="text-2xl font-bold bg-gradient-to-r from-orange-600 to-yellow-600 bg-clip-text text-transparent">
                 ${{ product.price.toLocaleString() }}
               </span>
-              <span class="text-sm px-2 py-1 rounded" :class="product.stock > 0 ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'">
-                Stock: {{ product.stock }}
-              </span>
             </div>
 
             <button

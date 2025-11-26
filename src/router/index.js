@@ -36,11 +36,11 @@ const router = createRouter({
   routes
 });
 
-// Navigation Guard
+// Guardian
 router.beforeEach((to, from, next) => {
   const authStore = useAuthStore();
 
-  // Si la ruta requiere autenticación
+  //si no esta logedo
   if (to.meta.requiresAuth && !authStore.isAuthenticated) {
     next('/login');
   }

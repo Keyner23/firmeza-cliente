@@ -97,7 +97,7 @@
             </div>
 
             <!-- Customer Info Form -->
-            <div v-if="!authStore.isAuthenticated" class="space-y-3 mb-4">
+            <!-- <div v-if="!authStore.isAuthenticated" class="space-y-3 mb-4">
               <p class="text-sm text-gray-600 mb-2">Completa tus datos:</p>
               <input
                 v-model="customerName"
@@ -120,7 +120,7 @@
                 class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                 required
               />
-            </div>
+            </div> -->
 
             <button
               @click="handleCheckout"
@@ -154,16 +154,16 @@ const cartStore = useCartStore();
 const loading = ref(false);
 const errorMessage = ref('');
 
-// Guest customer info
+
 const customerName = ref('');
 const customerEmail = ref('');
 const customerDocument = ref('');
 
 const handleCheckout = async () => {
-  // Validar datos si es invitado
+  // obligamos a logearse
   if (!authStore.isAuthenticated) {
     if (!customerName.value || !customerEmail.value || !customerDocument.value) {
-      errorMessage.value = 'Por favor completa todos los campos';
+      errorMessage.value = 'Por favor ingrese su cuenta ';
       return;
     }
   }
@@ -182,7 +182,6 @@ const handleCheckout = async () => {
     quantity: item.quantity
   }))
 };
-
 
     await salesApi.create(saleData);
     
