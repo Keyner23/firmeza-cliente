@@ -1,11 +1,11 @@
-// src/router/index.js
+
 import { createRouter, createWebHistory } from 'vue-router';
 import { useAuthStore } from '@/stores/auth';
 
 const routes = [
   {
     path: '/',
-    redirect: '/products'
+    redirect: '/login'
   },
   {
     path: '/login',
