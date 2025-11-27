@@ -43,7 +43,7 @@ Follow these steps to set up and run the project locally:
 - Node.js
 - npm 
 
-### ⤵️ Installation
+## Installation
 
 1. Clone the repository:
    ```bash
@@ -76,10 +76,9 @@ npm run build
 
 The build files will be generated in the `dist/` directory.
 
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
 ---
+## Contributors
 
-Developed by [Keyner23](https://github.com/Keyner23).
+<a href="https://github.com/migueweb/boa/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Keyner23/firmeza-cliente" alt="Contributors" />
+</a>
